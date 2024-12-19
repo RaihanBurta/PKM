@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Si-Peka - Konselor Sebaya</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/Landing Page/Si-Peka.png" rel="icon">
+  <link href="assets/img/Landing Page/Si-Peka.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename" style="color: #cf9100;">Si-Peka.</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="">Wawasan</a></li>
+          <li><a href="">Screening</a></li>
+          <li><a href="">Konseling</a></li>
+          <li><a href="">Tentang Kami</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <button class="btn-getstarted btn btn-custom" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+
+
+    </div>
+  </header>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+            </div>
+            <div class="mb-3 position-relative">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+              <i class="bi bi-eye-fill password-toggle" onclick="togglePasswordVisibility('loginPassword')"></i>
+            </div>
+            <button type="submit" class="btn btn-login w-100">Login</button>
+          </form>
+          <p class="text-center mt-3">Belum buat akun? <a href="#" class="text-decoration-none"
+              onclick="switchToRegister()">Register baru</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="registerName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="registerName" placeholder="Enter your full name">
+            </div>
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email">
+            </div>
+            <div class="mb-3 position-relative">
+              <label for="registerPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="registerPassword" placeholder="Create a password">
+              <i class="bi bi-eye-fill password-toggle" onclick="togglePasswordVisibility('registerPassword')"></i>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="termsCheckbox">
+              <label class="form-check-label" for="termsCheckbox">I agree to the <a href="#"
+                  class="text-decoration-none">Terms and Conditions</a></label>
+            </div>
+            <button type="submit" class="btn btn-register w-100">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+        data-aos="zoom-out">
+        <img src="assets/img/Landing Page/Si-Peka.svg" class="img-fluid animated" alt="" style="width: 200%;">
+        <h1>Tempat curhat bareng teman sebaya <span style="color: #cf9100;">Si-Peka.</span></h1>
+        <p>Kita di sini buat dengerin, support, dan bantu kamu ngadepin masalah sehari-hari.</p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/Landing Page/gambar 1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            <h3>Peer-Counseling Itu Apa, Sih?</h3>
+            <p class="fst-italic">
+              Peer-counseling itu simpel banget, kok! Ini adalah tempat di mana kamu bisa curhat sama teman sebaya
+              yang
+              udah dilatih buat jadi pendengar yang baik. Mereka bakal bantu kamu nemuin solusi, kasih dukungan, atau
+              sekadar jadi tempat kamu cerita tanpa takut dihakimi.
+            </p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/Landing Page/gambar 2.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>Bisa Cerita Santai</h3>
+            <p class="fst-italic">
+              Di Si-Peka, kamu nggak perlu jaim! Ceritain aja semua yang lagi bikin kamu overthinking. Kami siap
+              dengerin dengan santai, kayak ngobrol sama sahabat sendiri.
+            </p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/Landing Page/gambar 3.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <h3>Data Dijamin Aman</h3>
+            <p>Tenang aja, semua cerita kamu bakal dijaga banget. Privasi itu hal yang penting buat kami, jadi nggak
+              akan ada yang bocor!</p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/Landing Page/gambar 4.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+            <h3>Konselor Asik dan Berpengalaman</h3>
+            <p class="fst-italic">
+              Teman sebaya di Si-Peka itu udah jago banget karena mereka dilatih langsung sama ahlinya. Jadi, mereka
+              ngerti banget gimana cara bantu kamu.
+            </p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/Landing Page/gambar 5.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <h3>Super Praktis</h3>
+            <p>Lagi pusing tengah malam? Si-Peka selalu ada! Kamu cuma butuh HP dan beberapa klik buat dapetin support
+              kapan aja, di mana aja.</p>
+          </div>
+        </div><!-- Features Item -->
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-8">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Apa itu Si-Peka?</h3>
+                <div class="faq-content">
+                  <p>Si-Peka adalah platform peer-counseling yang memberikan ruang untuk kamu berbagi cerita atau
+                    curhat
+                    dengan teman sebaya yang telah dilatih secara profesional. Tujuannya adalah membantu kamu
+                    menemukan
+                    solusi atau sekadar menjadi tempat berbagi tanpa rasa takut.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Apakah cerita aku aman di Si-Peka?</h3>
+                <div class="faq-content">
+                  <p>Tentu saja! Kami sangat menjaga privasi kamu. Semua cerita dan data dijamin aman dan hanya
+                    digunakan untuk keperluan konseling. Privasi adalah prioritas utama kami.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Siapa yang jadi konselor di Si-Peka?</h3>
+                <div class="faq-content">
+                  <p>Konselor kami adalah teman sebaya yang sudah mendapatkan pelatihan khusus dari profesional di
+                    bidang psikologi. Mereka siap mendengarkan dengan empati dan tanpa penghakiman.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Bagaimana cara mulai curhat di Si-Peka?</h3>
+                <div class="faq-content">
+                  <p>Mudah banget! Kamu hanya perlu login ke aplikasi atau website Si-Peka, pilih konselor yang sedang
+                    tersedia, dan langsung mulai sesi obrolan. Semudah itu!</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Apakah layanannya mahal?</h3>
+                <div class="faq-content">
+                  <p>Nggak kok! Si-Peka menawarkan layanan dengan biaya yang sangat terjangkau untuk semua kalangan.
+                    Kami ingin memastikan setiap orang bisa mendapatkan dukungan yang mereka butuhkan tanpa beban
+                    biaya
+                    yang berat.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename" style="color: #cf9100;">Si-Peka.</span>
+          </a>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+          <p>© 2024<span> Copyright Team Si-Peka</span> <strong class="px-1 sitename"></strong><span></span></p>
+          <div class="credits">
+            Designed by Team Si-Peka</a>
+          </div>
+        </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function switchToRegister() {
+      const loginModal = document.getElementById('loginModal');
+      const registerModal = document.getElementById('registerModal');
+
+      const bootstrapModal = bootstrap.Modal.getInstance(loginModal);
+      bootstrapModal.hide();
+
+      const registerBootstrapModal = new bootstrap.Modal(registerModal);
+      registerBootstrapModal.show();
+    }
+
+    function togglePasswordVisibility(inputId) {
+      const passwordField = document.getElementById(inputId);
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
